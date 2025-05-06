@@ -1,2 +1,2 @@
 # clash-verge-script
-clash-verge 防DNS泄露脚本
+clash-verge Mihomo Party 防DNS泄露脚本 （通用）
