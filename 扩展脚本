@@ -5,11 +5,11 @@ const domesticNameservers = [
 ];
 // 国外DNS服务器
 const foreignNameservers = [
+  "https://208.67.222.222/dns-query", // OpenDNS
   "https://77.88.8.8/dns-query", //YandexDNS
   "https://1.1.1.1/dns-query", // CloudflareDNS
-  "https://8.8.4.4/dns-query#ecs=1.1.1.1/24&ecs-override=true", // GoogleDNS
-  "https://208.67.222.222/dns-query#ecs=1.1.1.1/24&ecs-override=true", // OpenDNS
-  "https://9.9.9.9/dns-query", //Quad9DNS
+  "https://8.8.4.4/dns-query", // GoogleDNS  
+
 ];
 // DNS配置
 const dnsConfig = {
@@ -41,12 +41,11 @@ const dnsConfig = {
     // 微信快速登录检测失败
     "localhost.work.weixin.qq.com"
   ],
-  "default-nameserver": ["223.5.5.5","1.2.4.8"],
+  "default-nameserver": ["223.5.5.5","1.2.4.8"],//可修改成自己ISP的DNS
   "nameserver": [...foreignNameservers],
   "proxy-server-nameserver":[...domesticNameservers],
   "nameserver-policy": {
-  "geosite:private,cn": domesticNameservers,
-  "domestic.com": domesticNameservers
+  "geosite:private,cn": domesticNameservers
   }
 };
 // 规则集通用配置
@@ -185,11 +184,10 @@ const rules = [
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,cncidr,全局直连,no-resolve",
   "RULE-SET,telegramcidr,电报消息,no-resolve",
-      // 其他规则
+  // 其他规则
   "GEOSITE,CN,全局直连",
   "GEOIP,LAN,全局直连,no-resolve",
   "GEOIP,CN,全局直连,no-resolve",
-
   "MATCH,漏网之鱼"
 ];
 // 代理组通用配置
