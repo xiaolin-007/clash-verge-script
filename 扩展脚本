@@ -176,6 +176,7 @@ const rules = [
   "RULE-SET,YouTube,YouTube",
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,bahamut,动画疯",
+  "RULE-SET,Spotify,Spotify",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,proxy,节点选择",
   "RULE-SET,gfw,节点选择",
