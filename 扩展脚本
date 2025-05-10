@@ -302,7 +302,7 @@ function main(config) {
       "proxies": ["节点选择"],
       "include-all": true,
       "filter": "(?i)台|tw|TW",
-      "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/donghuafeng.svg"
+      "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/bahamut.svg"
     },
     {
       ...groupBaseOption,
