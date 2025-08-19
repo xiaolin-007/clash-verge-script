@@ -168,7 +168,7 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/AI.txt",
-    "path": "./ruleset/xiaolin-007/BilibiliHMT.yaml"    
+    "path": "./ruleset/xiaolin-007/AI.yaml"    
   },
 };
 // 规则
@@ -383,3 +383,4 @@ function main(config) {
   return config;
 
 }
+
