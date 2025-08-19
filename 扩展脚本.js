@@ -164,6 +164,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/BilibiliHMT.txt",
     "path": "./ruleset/xiaolin-007/BilibiliHMT.yaml"    
   },
+  "AI": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/AI.txt",
+    "path": "./ruleset/xiaolin-007/BilibiliHMT.yaml"    
+  },
 };
 // 规则
 const rules = [
@@ -183,7 +189,8 @@ const rules = [
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,bahamut,动画疯",
   "RULE-SET,Spotify,Spotify",
-  "RULE-SET,BilibiliHMT,哔哩哔哩港澳台",  
+  "RULE-SET,BilibiliHMT,哔哩哔哩港澳台",
+  "RULE-SET,AI,AI",
   "RULE-SET,google,谷歌服务",
   "RULE-SET,proxy,节点选择",
   "RULE-SET,gfw,节点选择",
@@ -283,7 +290,7 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "ChatGPT",
+      "name": "AI",
       "type": "select",
       "include-all": true,
       "proxies": ["节点选择", "延迟选优", "故障转移"],
@@ -374,4 +381,5 @@ function main(config) {
   })
   // 返回修改后的配置
   return config;
+
 }
