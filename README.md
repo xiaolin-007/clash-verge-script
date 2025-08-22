@@ -7,3 +7,5 @@ clash-verge Mihomo Party 防DNS泄露脚本 （通用）
 20250721 新增规则:哔哩哔哩港澳台
 
 20250819 修复chatgpt规则，合并为新的AI代理分组
+
+20250822 B站规则默认直连，添加判断config["proxies"]
