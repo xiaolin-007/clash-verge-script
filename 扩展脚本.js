@@ -325,7 +325,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "哔哩哔哩港澳台",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移","全局直连"],
+      "proxies": ["全局直连", "节点选择","延迟选优", "故障转移"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/bilibili.svg"
@@ -374,13 +374,17 @@ function main(config) {
   // 覆盖原配置中的规则
   config["rule-providers"] = ruleProviders;
   config["rules"] = rules;
-  config["proxies"].forEach(proxy => {
-    // 为每个节点设置 udp = true
-    proxy.udp = true
+// 添加判断
+  if(config["proxies"]) {
+    config["proxies"].forEach(proxy => {
+      // 为每个节点设置 udp = true
+      proxy.udp = true
 
-  })
+    })
+  }
   // 返回修改后的配置
   return config;
 
 }
+
 
