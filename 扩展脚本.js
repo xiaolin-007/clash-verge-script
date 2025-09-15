@@ -44,6 +44,7 @@ const dnsConfig = {
   "default-nameserver": ["223.5.5.5","1.2.4.8"],//可修改成自己ISP的DNS
   "nameserver": [...foreignNameservers],
   "proxy-server-nameserver":[...domesticNameservers],
+  "direct-nameserver":[...domesticNameservers],
   "nameserver-policy": {
   "geosite:private,cn": domesticNameservers
   }
@@ -386,5 +387,6 @@ function main(config) {
   return config;
 
 }
+
 
 
