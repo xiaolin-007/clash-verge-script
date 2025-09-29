@@ -175,7 +175,7 @@ const ruleProviders = {
     ...ruleProviderCommon,
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/TikTok.txt",
-    "path": "./ruleset/xiaolin-007/AI.yaml"    
+    "path": "./ruleset/xiaolin-007/TikTok.yaml"    
   },
 };
 // 规则
@@ -402,3 +402,4 @@ function main(config) {
   return config;
 
 }
+
