@@ -161,7 +161,7 @@ rule-providers:
 proxy-groups:
   - name: "节点选择"
     type: "select"
-    proxies: ["延迟选优", "故障转移"]
+    proxies: []
     include-all: true
     interval: 300
     timeout: 3000
@@ -170,30 +170,9 @@ proxy-groups:
     max-failed-times: 3
     hidden: false
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
-  - name: "延迟选优"
-    type: "url-test"
-    interval: 120
-    tolerance: 200
-    include-all: true
-    timeout: 3000
-    url: "https://www.google.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"
-  - name: "故障转移"
-    type: "fallback"
-    include-all: true
-    interval: 300
-    timeout: 3000
-    url: "https://www.google.com/generate_204"
-    lazy: true
-    max-failed-times: 3
-    hidden: false
-    icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
   - name: "谷歌服务"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择", "全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -204,7 +183,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"
   - name: "YouTube"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择", "全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -215,7 +194,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"
   - name: "Netflix"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择", "全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -226,7 +205,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg"
   - name: "电报消息"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择", "全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -238,7 +217,7 @@ proxy-groups:
   - name: "ChatGPT"
     type: "select"
     include-all: true
-    proxies: ["节点选择", "延迟选优", "故障转移"]
+    proxies: ["节点选择"]
     interval: 300
     timeout: 3000
     url: "https://www.google.com/generate_204"
@@ -248,7 +227,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
   - name: "微软服务"
     type: "select"
-    proxies: ["全局直连", "节点选择", "延迟选优"]
+    proxies: ["全局直连", "节点选择"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -259,7 +238,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
   - name: "苹果服务"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择", "全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -282,7 +261,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/Bahamut.svg"
   - name: "Spotify"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择","全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -303,7 +282,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/bug.svg"
   - name: "全局直连"
     type: "select"
-    proxies: ["DIRECT", "节点选择", "延迟选优", "故障转移"]
+    proxies: ["DIRECT", "节点选择"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -324,7 +303,7 @@ proxy-groups:
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg"
   - name: "漏网之鱼"
     type: "select"
-    proxies: ["节点选择", "延迟选优", "故障转移", "全局直连"]
+    proxies: ["节点选择", "全局直连"]
     include-all: true
     interval: 300
     timeout: 3000
@@ -361,4 +340,5 @@ rules:
   - "GEOSITE,CN,全局直连"
   - "GEOIP,LAN,全局直连,no-resolve"
   - "GEOIP,CN,全局直连,no-resolve"
+
   - "MATCH,漏网之鱼"
