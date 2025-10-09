@@ -234,7 +234,17 @@ function main(config) {
 
   // 覆盖原配置中DNS配置
   config["dns"] = dnsConfig;
-
+  // 添加geodata设置
+  config["geodata-mode"] = true;
+  config["geodata-loader"] = "standard";
+  config["geox-url"] = {
+    geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat",
+    geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat",
+    mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb",
+    asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb",
+  };
+  config["geo-auto-update"] = true;
+  config["geo-update-interval"] = 24;
   // 覆盖原配置中的代理组
   config["proxy-groups"] = [
     {
@@ -382,7 +392,4 @@ function main(config) {
   }
   // 返回修改后的配置
   return config;
-
 }
-
-
