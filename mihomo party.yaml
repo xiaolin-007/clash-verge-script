@@ -36,6 +36,16 @@ dns:
       - "https://223.5.5.5/dns-query"
       - "https://doh.pub/dns-query"
 
+geodata-mode: true 
+geodata-loader: standard 
+geox-url: 
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+geo-auto-update: true
+geo-update-interval: 24
+
 rule-providers:
   reject:
     type: http
@@ -340,5 +350,4 @@ rules:
   - "GEOSITE,CN,全局直连"
   - "GEOIP,LAN,全局直连,no-resolve"
   - "GEOIP,CN,全局直连,no-resolve"
-
   - "MATCH,漏网之鱼"
