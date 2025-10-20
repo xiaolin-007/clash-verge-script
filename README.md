@@ -13,3 +13,5 @@ clash-verge Mihomo Party 防DNS泄露脚本 （通用）
 20250822 B站规则默认直连，添加判断config["proxies"]
 
 20250926 添加TikTok分流规则
+
+20251020 移除延迟选优, 故障转移分组
