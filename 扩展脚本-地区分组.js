@@ -258,7 +258,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "YouTube",
       "type": "select",
-      "proxies": ["节点选择","美国-自动","香港-自动","日本-自动","全局直连"],
+      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"
@@ -267,7 +267,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Netflix",
       "type": "select",
-      "proxies": ["节点选择","美国-自动","香港-自动","日本-自动","全局直连"],
+      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg"
@@ -294,7 +294,7 @@ function main(config) {
       "name": "TikTok",
       "type": "select",
       "include-all": true,
-      "proxies": ["节点选择","美国-自动","香港-自动","日本-自动","全局直连"],
+      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/tiktok.svg"
     },
@@ -327,7 +327,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "哔哩哔哩港澳台",
       "type": "select",
-      "proxies": ["全局直连","节点选择"],
+      "proxies": ["全局直连","节点选择","台湾-自动","香港-自动"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/bilibili.svg"
@@ -336,7 +336,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Spotify",
       "type": "select",
-      "proxies": ["节点选择","美国-自动","香港-自动","日本-自动","全局直连"],
+      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg"
@@ -443,3 +443,4 @@ function main(config) {
   return config;
 
 }
+
