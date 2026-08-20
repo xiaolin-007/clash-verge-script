@@ -6,6 +6,8 @@ clash-verge Mihomo Party 防DNS泄露脚本 （通用）
 
 20260701 AI规则集 增加Apple Intelligence、Siri相关规则
 
+20260820 修正微软服务和icloud规则错乱（小马虎 哈哈）
+
 20260615 删除部分USER-AGENT规则
 
 20250702 新增mihomo party 覆写脚本 yaml格式
