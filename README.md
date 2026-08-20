@@ -3,6 +3,7 @@ clash-verge Mihomo Party 防DNS泄露脚本 （通用）
 该脚本是JavaScript，不是YAML，请注意！！！
 
 相关视频：https://www.youtube.com/watch?v=sp6Iafweo7I
+
 20260820 修正微软服务和icloud规则错乱（小马虎 哈哈）
 
 20260701 AI规则集 增加Apple Intelligence、Siri相关规则
