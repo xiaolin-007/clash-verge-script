@@ -177,6 +177,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/TikTok.txt",
     "path": "./ruleset/xiaolin-007/TikTok.yaml"    
   },
+  "Microsoft": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Microsoft.txt",
+    "path": "./ruleset/xiaolin-007/Microsoft.yaml"    
+  },
 };
 // 规则
 const rules = [
@@ -190,7 +196,8 @@ const rules = [
   "RULE-SET,applications,全局直连",
   "RULE-SET,private,全局直连",
   "RULE-SET,reject,广告过滤",
-  "RULE-SET,icloud,微软服务",
+  "RULE-SET,Microsoft,微软服务",
+  "RULE-SET,icloud,iCloud服务",
   "RULE-SET,apple,苹果服务",
   "RULE-SET,YouTube,YouTube",
   "RULE-SET,Netflix,Netflix",
@@ -303,6 +310,14 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "iCloud服务",
+      "type": "select",
+      "proxies": ["全局直连","节点选择"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/iCloud.svg"
+    },
+    {
+      ...groupBaseOption,
       "name": "苹果服务",
       "type": "select",
       "proxies": ["节点选择","全局直连"],
@@ -383,4 +398,3 @@ function main(config) {
   return config;
 
 }
-
