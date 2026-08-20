@@ -177,6 +177,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/TikTok.txt",
     "path": "./ruleset/xiaolin-007/TikTok.yaml"    
   },
+  "Microsoft": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/rule/Microsoft.txt",
+    "path": "./ruleset/xiaolin-007/Microsoft.yaml"    
+  },
 };
 // 规则
 const rules = [
@@ -190,7 +196,8 @@ const rules = [
   "RULE-SET,applications,全局直连",
   "RULE-SET,private,全局直连",
   "RULE-SET,reject,广告过滤",
-  "RULE-SET,icloud,微软服务",
+  "RULE-SET,Microsoft,微软服务",
+  "RULE-SET,icloud,iCloud服务",
   "RULE-SET,apple,苹果服务",
   "RULE-SET,YouTube,YouTube",
   "RULE-SET,Netflix,Netflix",
@@ -251,25 +258,22 @@ function main(config) {
       "type": "select",
       "proxies": ["节点选择","全局直连"],
       "include-all": true,
-    
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"
     },
     {
       ...groupBaseOption,
       "name": "YouTube",
       "type": "select",
-      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
+      "proxies": ["节点选择","全局直连"],
       "include-all": true,
-      "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"
     },
     {
       ...groupBaseOption,
       "name": "Netflix",
       "type": "select",
-      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
+      "proxies": ["节点选择","全局直连"],
       "include-all": true,
-      "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg"
     },
     {
@@ -286,7 +290,6 @@ function main(config) {
       "type": "select",
       "include-all": true,
       "proxies": ["节点选择"],
-      "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
     },
     {
@@ -294,8 +297,7 @@ function main(config) {
       "name": "TikTok",
       "type": "select",
       "include-all": true,
-      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
-      "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
+      "proxies": ["节点选择"],
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/tiktok.svg"
     },
     {
@@ -305,6 +307,14 @@ function main(config) {
       "proxies": ["全局直连","节点选择"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "iCloud服务",
+      "type": "select",
+      "proxies": ["全局直连","节点选择"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/iCloud.svg"
     },
     {
       ...groupBaseOption,
@@ -318,7 +328,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "动画疯",
       "type": "select",
-      "proxies": ["节点选择","台湾-自动"],
+      "proxies": ["节点选择"],
       "include-all": true,
       "filter": "(?i)台|tw|TW",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/Bahamut.svg"
@@ -327,7 +337,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "哔哩哔哩港澳台",
       "type": "select",
-      "proxies": ["全局直连","节点选择","台湾-自动","香港-自动"],
+      "proxies": ["全局直连","节点选择"],
       "include-all": true,
       "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/bilibili.svg"
@@ -336,9 +346,8 @@ function main(config) {
       ...groupBaseOption,
       "name": "Spotify",
       "type": "select",
-      "proxies": ["节点选择","美国-自动","香港-自动","台湾-自动","日本-自动","新加坡-自动","韩国-自动","全局直连"],
+      "proxies": ["节点选择","全局直连"],
       "include-all": true,
-      "filter": "^(?!.*(官网|套餐|流量|异常|剩余)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/spotify.svg"
     },
     {
